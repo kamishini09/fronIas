@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ias-handyman"
+    }
+  },
+  "defaultProject": "ias-handyman",
+  "cli": {
+    "analytics": "0d96a2ff-4f2c-48b2-bf6a-41e29da9a9ea"
+  }
 }

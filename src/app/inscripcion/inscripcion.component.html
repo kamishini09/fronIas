@@ -1,0 +1,59 @@
+<router-outlet></router-outlet>
+
+<div class="row">
+    
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Identificador Técnico</label>
+            <input type="text" class="form-control" aria-describedby="Tecnico"  [(ngModel)]="It" name="identeTecni">
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Identificador Servicio</label>
+            <input type="text" class="form-control" aria-describedby="Servicio" [(ngModel)]="Is"  name="identServi">
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <label>Datos de Inicio</label>
+        <div class="form-group">
+            <div class="input-group">
+                <input class="form-control" placeholder="yyyy-mm-dd"  [(ngModel)]="modelInicial" name="dpI" ngbDatepicker
+                    #dI="ngbDatepicker">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary calendar" (click)="dI.toggle()" type="button"></button>
+                </div>
+            </div>
+        </div>
+        <pre>Model: {{ modelInicial | json }}</pre>
+        <ngb-timepicker [(ngModel)]="timeInicial" [meridian]="meridianI" ></ngb-timepicker>
+        <hr>
+        <pre>Selected time: {{timeInicial | json}}</pre>
+    </div>
+
+    <div class="col-md-3">
+        <label>Datos de Inicio</label>
+        <div class="form-group">
+            <div class="input-group">
+                <input class="form-control" placeholder="yyyy-mm-dd"  [(ngModel)]="modelFinal" name="dpF" ngbDatepicker
+                    #dF="ngbDatepicker" >
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary calendar" (click)="dF.toggle()" type="button"></button>
+                </div>
+            </div>
+        </div>
+        <pre>Model: {{ modelFinal | json }}</pre>
+        <ngb-timepicker [(ngModel)]="timeFinal" [meridian]="meridianF"></ngb-timepicker>
+        <hr>
+        <pre>Selected time: {{timeFinal | json}}</pre>
+    </div>
+
+   
+</div>
+
+<div class="col-3">
+    <button (click)="Guardar()" class="btn-dark" >Guardar</button> 
+</div>
+
+

@@ -1,0 +1,11 @@
+nav li {
+    list-style: none;
+    display: initial;
+    margin: 20px;
+    font-size: larger;
+}
+nav a{ color: black;}
+nav a.active{    
+    font-weight: 500;
+    color: red;
+}
